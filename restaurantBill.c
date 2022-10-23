@@ -34,4 +34,12 @@ int main(int argc, char const *argv[]) {
     double totalBill = mealCost + taxAmount + tipAmount; // Add up subtotal, tax, and tip to get total cost
 
     // Display cost information to user
+    printf("Receipt:\n");
+    printf("- %s: $%.2f\n", randomMeal.name, randomMeal.price);
+    printf("\n");
+    printf("Subtotal: $%.2f\n", mealCost);
+    printf("Tax: $%.2f\n", taxAmount);
+    printf("Tip: $%.2f\n", tipAmount);
+    printf("-----------\n");
+    printf("Total: $%.2f\n", totalBill);
 }

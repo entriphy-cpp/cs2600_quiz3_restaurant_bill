@@ -1,6 +1,8 @@
+#include "meal.h"
+
 // External table
-// extern Meal MealTable[];
-// extern const int MealTableEntries;
+extern Meal MealTable[];
+extern const int MealTableEntries;
 
 int main(int argc, char const *argv[]) {
     // Check argument count (should be >= 3)

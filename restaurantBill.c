@@ -14,6 +14,11 @@ int main(int argc, char const *argv[]) {
     }
 
     // Parse command line arguments for tax and tip (convert to double)
+    char *ptr; // Temporary ptr to use for strtod
+    double tax = strtod(argv[1], &ptr);
+    double tip = strtod(argv[2], &ptr);
+    printf("Tax: %.2f%%\n", tax);
+    printf("Tip: %.2f%%\n", tip);
 
     // Randomly select a meal in the meal table
 

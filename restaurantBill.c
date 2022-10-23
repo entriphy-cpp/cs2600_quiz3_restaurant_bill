@@ -23,6 +23,8 @@ int main(int argc, char const *argv[]) {
 
     // Randomly select a meal in the meal table
     srand(time(NULL));
+    int random = rand() % MealTableEntries;
+    Meal randomMeal = MealTable[random];
 
     // Calculate meal cost, tax amount, tip amount, and total bill
 

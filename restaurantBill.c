@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <time.h>
 #include "meal.h"
 
 // External table
@@ -21,6 +22,7 @@ int main(int argc, char const *argv[]) {
     printf("Tip: %.2f%%\n", tip);
 
     // Randomly select a meal in the meal table
+    srand(time(NULL));
 
     // Calculate meal cost, tax amount, tip amount, and total bill
 

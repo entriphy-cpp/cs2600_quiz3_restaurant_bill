@@ -25,17 +25,17 @@ int main(int argc, char const *argv[]) {
     // Randomly select a meal in the meal table
     srand(time(NULL));
     int random = rand() % MealTableEntries;
-    Meal randomMeal = MealTable[random];
+    PtrToMeal randomMeal = MealTable + random;
 
     // Calculate meal cost, tax amount, tip amount, and total bill
-    double mealCost = randomMeal.price;
+    double mealCost = randomMeal->price;
     double taxAmount = mealCost * (tax / 100); // Apply tax to subtotal
     double tipAmount = mealCost * (tip / 100); // Apply tip to subtotal
     double totalBill = mealCost + taxAmount + tipAmount; // Add up subtotal, tax, and tip to get total cost
 
     // Display cost information to user
     printf("Receipt:\n");
-    printf("- %s: $%.2f\n", randomMeal.name, randomMeal.price);
+    printf("- %s: $%.2f\n", randomMeal->name, randomMeal->price);
     printf("\n");
     printf("Subtotal: $%.2f\n", mealCost);
     printf("Tax: $%.2f\n", taxAmount);
